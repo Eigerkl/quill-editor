@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="pdf.js"></script>
+  <script src="pdf.worker.js"></script>
+</head>
+<body>
+<div id="pdf_viewer"></div>
+</body>
+<script type="text/javascript">
+  if(PDFObject.supportsPDFs){
+    // PDF嵌入到网页
+    PDFObject.embed("argument.pdf", "#pdf_viewer" );
+  } else {
+    location.href = "/canvas";
+  }
+</script>
+</html>
